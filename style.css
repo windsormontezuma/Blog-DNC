@@ -1,0 +1,316 @@
+header {
+    background: #07a08b;
+    color: #fff;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+    pointer-events: none;
+    padding-left: 40px;
+}
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 32px auto 0 auto;
+    gap: 32px;
+}
+main {
+    flex: 3;
+}
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+.main-post {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 16px #0001;
+}
+.main-post img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+.main-post-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 32px;
+    background: linear-gradient(0deg, #000b 60%, transparent 100%);
+    width: 100%;
+}
+.main-post-content small {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+.main-post-content h2 {
+    margin: 8px 0 0 0;
+    font-size: 2rem;
+}
+.main-post-content p {
+    margin: 8px 0 0 0;
+    font-size: 1.1rem;
+}
+.section-title {
+    background: #07a08b;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recent-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.post-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px #0001;
+    overflow: hidden;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+.post-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.post-card-content {
+    padding: 20px;
+}
+.post-card-content small {
+    color: #07a08b;
+    font-weight: 500;
+}
+.post-card-content h3 {
+    margin: 8px 0 0 0;
+    font-size: 1.3rem;
+}
+.post-card-content p {
+    margin: 8px 0 0 0;
+    color: #222;
+    font-size: 1rem;
+}
+.post-card-content .author {
+    font-weight: bold;
+    margin-top: 8px;
+    color: #222;
+}
+.post-card-content .date {
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+aside .widget {
+
+    padding: 24px 24px; 
+    margin-bottom: 8px; 
+}
+.widget-title {
+    background: #07a08b;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem; 
+    margin-bottom: 20px;
+    padding: 14px 0 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+  
+    text-decoration: none;
+}
+.popular-list, .category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.popular-list li {
+    display: flex;
+    align-items: center;
+    gap: 28px; 
+    margin-bottom: 20px; 
+    background: #fff;
+    border-radius: 16px; 
+    box-shadow: 0 4px 18px #0002; 
+    padding: 18px 14px; 
+}
+.popular-list img {
+    width: 110px; 
+    height: 75px; 
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #0002;
+}
+.popular-list .info span {
+    font-weight: bold;
+    color: #222;
+    font-size: 1.18rem; 
+}
+.popular-list .info small {
+    color: #888;
+    font-size: 1.08rem; 
+}
+.category-list li {
+    color: #222;
+    margin-bottom: 5px; 
+    font-size: 1.18rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0; 
+}
+.category-list li span {
+    color: #888;
+    margin-left: 12px; 
+    min-width: 32px;
+    text-align: right;
+    font-size: 1.08rem; 
+}
+footer {
+    background: #07a08b;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    border-radius: 0 0 12px 12px;
+    margin-top: 32px;
+}
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 0;
+    }
+    aside {
+        flex-direction: row;
+        gap: 16px;
+        margin-top: 32px;
+    }
+}
+@media (max-width: 700px) {
+    .container {
+        padding: 0 8px;
+    }
+    .recent-posts {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.4rem;
+        padding-left: 12px;
+        text-align: center;
+    }
+    .container {
+        padding: 0 2px;
+        gap: 0;
+    }
+    .main-post img {
+        height: 180px;
+    }
+    .main-post-content {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+    .main-post-content h2 {
+        font-size: 1.2rem;
+    }
+    .main-post-content p {
+        font-size: 0.95rem;
+    }
+    .section-title {
+        font-size: 1rem;
+        padding: 10px 8px;
+    }
+    .recent-posts {
+        gap: 10px;
+    }
+    .post-card img {
+        height: 90px;
+    }
+    .post-card-content {
+        padding: 10px;
+    }
+    .post-card-content h3 {
+        font-size: 1rem;
+    }
+    .post-card-content p {
+        font-size: 0.9rem;
+    }
+    aside {
+        gap: 6px;
+        margin-top: 16px;
+    }
+    aside .widget {
+        padding: 10px 6px;
+    }
+    .widget-title {
+        font-size: 1rem;
+        padding: 8px 0 8px 8px;
+    }
+    .popular-list li {
+        gap: 10px;
+        margin-bottom: 10px;
+        padding: 8px 4px;
+    }
+    .popular-list img {
+        width: 60px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .popular-list .info span {
+        font-size: 0.95rem;
+    }
+    .popular-list .info small {
+        font-size: 0.85rem;
+    }
+    .category-list li {
+        font-size: 0.95rem;
+        padding: 4px 0;
+    }
+    .category-list li span {
+        font-size: 0.85rem;
+        margin-left: 6px;
+        min-width: 18px;
+    }
+    footer {
+        font-size: 0.95rem;
+        padding: 10px 0;
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        font-size: 1.1rem;
+        padding-left: 2px;
+    }
+    .main-post-content {
+        padding: 6px;
+    }
+    .widget-title {
+        font-size: 0.9rem;
+        padding: 6px 0 6px 4px;
+    }
+}
